@@ -1,30 +1,30 @@
 ---
--summary: 
+- summary: 
     Успешная регистрации игрока
- requirement: 
+  requirement: 
     Игрок должен иметь возможность зарегистрироваться
- prerequisites: 
+  prerequisites: 
     Открыта страница регистрации
- test-data: 
+  test-data: 
     no data
- steps:
+  steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
     - Вводим Password Confirmation
     - Нажимаем кнопку «Submit»
- expected-result: 
+  expected-result: 
     Игрок попадает на страницу Lobby игры
 
--summary: 
+- summary: 
     Проверка регистрации игрока с ошибочными данными
- requirement: 
+  requirement: 
     При вводе ошибочных данных в форму, система должна выдать подсказу 
- prerequisites:
+  prerequisites:
     Открыта страница регистарции
- test-data: 
+  test-data: 
     no data
- steps:
+  steps:
     - В поле  Nickname вводим "1"
     - В поле Email вводим "@"
     - В поле Password вводим "1"
@@ -34,20 +34,20 @@
     Под полями ввода отображаются подсказки верного ввода 
     
 
- -summary: 
+ - summary: 
      Успешная авторизация
-  requirement: |
+   requirement: |
      Игрок должен иметь возможность авторизоваться
-  prerequisites: |
+   prerequisites: |
      Открыта страница авторизации
-  test-data: |
+   test-data: |
      Email TestOK@TestOK.ru
      Password TestOK
-  steps:
+   steps:
      - Ввести Email
      - Ввести Password
      - Нажимаем кнопку «Submit»
-  expected-result: |
+   expected-result: |
      Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
  -summary: |
