@@ -1,54 +1,54 @@
 ---
 -summary: 
-  Успешная регистрации игрока
-requirement: 
-  Игрок должен иметь возможность зарегистрироваться
-prerequisites: 
-  Открыта страница регистрации
-test-data: 
-  no data
-steps:
-  - Вводим Nickname
-  - Вводим Email
-  - Вводим Password
-  - Вводим Password Confirmation
-  - Нажимаем кнопку «Submit»
-expected-result: 
-  Игрок попадает на страницу Lobby игры
+    Успешная регистрации игрока
+ requirement: 
+    Игрок должен иметь возможность зарегистрироваться
+ prerequisites: 
+    Открыта страница регистрации
+ test-data: 
+    no data
+ steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Вводим Password Confirmation
+    - Нажимаем кнопку «Submit»
+ expected-result: 
+    Игрок попадает на страницу Lobby игры
 
 -summary: 
-  Проверка регистрации игрока с ошибочными данными
-requirement: 
-  При вводе ошибочных данных в форму, система должна выдать подсказу 
-prerequisites:
-  Открыта страница регистарции
-test-data: 
-  no data
-steps:
-  - В поле  Nickname вводим "1"
-  - В поле Email вводим "@"
-  - В поле Password вводим "1"
-  - В поле Password Confirmation вводим "2"
-  - Нажимаем кнопку «Submit»
- expected-result: 
-  Под полями ввода отображаются подсказки верного ввода 
+    Проверка регистрации игрока с ошибочными данными
+ requirement: 
+    При вводе ошибочных данных в форму, система должна выдать подсказу 
+ prerequisites:
+    Открыта страница регистарции
+ test-data: 
+    no data
+ steps:
+    - В поле  Nickname вводим "1"
+    - В поле Email вводим "@"
+    - В поле Password вводим "1"
+    - В поле Password Confirmation вводим "2"
+    - Нажимаем кнопку «Submit»
+  expected-result: 
+    Под полями ввода отображаются подсказки верного ввода 
     
 
  -summary: 
-   Успешная авторизация
- requirement: |
-   Игрок должен иметь возможность авторизоваться
- prerequisites: |
-   Открыта страница авторизации
- test-data: |
-   Email TestOK@TestOK.ru
-   Password TestOK
- steps:
-   - Ввести Email
-   - Ввести Password
-   - Нажимаем кнопку «Submit»
- expected-result: |
-   Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
+     Успешная авторизация
+  requirement: |
+     Игрок должен иметь возможность авторизоваться
+  prerequisites: |
+     Открыта страница авторизации
+  test-data: |
+     Email TestOK@TestOK.ru
+     Password TestOK
+  steps:
+     - Ввести Email
+     - Ввести Password
+     - Нажимаем кнопку «Submit»
+  expected-result: |
+     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
  -summary: |
    Проверка авторизации несуществующего в системе игрока
