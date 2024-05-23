@@ -33,93 +33,92 @@
   expected-result: 
     Под полями ввода отображаются подсказки верного ввода 
     
-
- - summary: 
+- summary: 
      Успешная авторизация
-   requirement: |
+  requirement: |
      Игрок должен иметь возможность авторизоваться
-   prerequisites: |
+  prerequisites: |
      Открыта страница авторизации
-   test-data: |
+  test-data: |
      Email TestOK@TestOK.ru
      Password TestOK
-   steps:
+  steps:
      - Ввести Email
      - Ввести Password
      - Нажимаем кнопку «Submit»
-   expected-result: |
+  expected-result: |
      Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
- -summary: |
+- summary: |
    Проверка авторизации несуществующего в системе игрока
- requirement: |
+  requirement: |
    При вводе незарегистрированных данных, сайт должен выдать ошибку
- prerequisites: |
+  prerequisites: |
    Открыта страница авторизации
- test-data: |
+  test-data: |
    Email TestOK@TestOK.ru
    Password TestOK
- steps:
+  steps:
    - Ввести Email
    - Ввести Password
    - Нажимаем кнопку «Submit»
- expected-result: |
+  expected-result: |
    Появляется сообщение "EMAIL_NOT_FOUND"
 
- -summary: |
+- summary: |
     Успешная авторизация с аккаунтом Github
- requirement: |
+  requirement: |
     Игрок может авторизоваться с аккаунтом Github
- prerequisites: |
+  prerequisites: |
     Должна быть регистрация на Github
- test-data: |
+  test-data: |
     no data 
- steps:
+  steps:
     - Нажать на кнопку "Sign in with Github"
- expected-result: |
+  expected-result: |
     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
- summary: |
+- summary: |
     Успешная авторизация с аккаунтом Discord
- requirement: |
+  requirement: |
     Игрок может авторизоваться с аккаунтом  Discord
- prerequisites: |
+  prerequisites: |
     Должна быть регистрация на Discord
- test-data: |
+  test-data: |
     no data 
- steps:
+  steps:
     - Нажать на кнопку "Sign in with Discord"
     - Нажать "Авторизовать" при запросе доступа CodeBattle к учётной записи Discord 
- expected-result: |
+  expected-result: |
     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
- -summary: |
+- summary: |
     Успешное создание игры с ботом
- requirement: |
+  requirement: |
     Игрок может создать игру с ботом
- prerequisites: |
+  prerequisites: |
     Авторизованы на сайте 
- test-data: |
+  test-data: |
     no data 
- steps:
+  steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With a bot
     - Выбрать ползунком в графе "Time control" - выбрать время игры
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
- expected-result: |
+  expected-result: |
     Начнется игра с выбранными параметрами
 
- -summary: |
+- summary: |
     Успешное создание игры с другом
- requirement: |
+  requirement: |
     Игрок может создать игру с другом
- prerequisites: |
+  prerequisites: |
     Авторизованы на сайте 
- test-data: |
+  test-data: |
     нужно знать ник друга
- steps:
+  steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With a friend
@@ -127,54 +126,54 @@
     - Набрать в графе "Choose opponent"- никнейм друга
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
- expected-result: |
+  expected-result: |
     Другу отправиться вызов, на иконке с двумя мечами загориться оповещение о приглашении, игра начнется как друг примет вызов
     
--summary: |
+- summary: |
     Успешное создание игры с любым игроком
-requirement: |
+  requirement: |
     Игрок может создать игру с любым игроком
-prerequisites: |
+  prerequisites: |
     Авторзованы на сайте
-test-data: |
+  test-data: |
     no data
-steps:
+  steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With other user
     - Выбрать ползунком в графе "Time control" - выбрать время игры
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
-expected-result: |
+  expected-result: |
     Игра создана, появится уведомление  - "Ждем соперника пожалуйста, подождите, пока кто-нибудь присоединится, или отправьте приглашение по ссылке ниже"   
 
--summary: |
+- summary: |
     Успешное создание турнира # турнир создан но не могу подключиться к своему
-requirement: |
+  requirement: |
     Игрок может создать турнир
-prerequisites: |
+  prerequisites: |
     Авторзован на сайте
-test-data: |
+  test-data: |
     no data
-steps:
+  steps:
     - На главной странице кликаем по иконке никнейма в правом верхнем углу
     - Выбираем "Tournaments"
     - Откроется страница "Tournaments"
     - Внизу страницы, к разделу "Create a new tournament"
-expected-result: |
+  expected-result: |
     Турнир успешно создан
     
--summary: |
+- summary: |
     Проверка отображения набора кода соперником  # Нужен ли тест?
-requirement: |
+  requirement: |
     Игрок должен видеть действия соперника
-prerequisites: |
+  prerequisites: |
     Авторизованы на сайте, создана игра
-test-data: |
+  test-data: |
     no data 
-steps:
+  steps:
     Открыта игра с соперником
-expected-result: |
+  expected-result: |
     Видим в игре действия соперника по набору кода , смены языка програмирования
     
 -summary: |
