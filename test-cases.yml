@@ -1,35 +1,36 @@
--summary: |
+---
+ -summary: |
     Успешная регистрации игрока
-requirement: |
+ requirement: |
     Игрок должен иметь возможность зарегистрироваться
-prerequisites: |
+ prerequisites: |
     Открыта страница регистрации
-test-data: |
+ test-data: |
     no data
-steps:
+ steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
     - Вводим Password Confirmation
     - Нажимаем кнопку «Submit»
-expected-result: |
+ expected-result: |
     Игрок попадает на страницу Lobby игры
 
--summary: |
+ -summary: |
     Проверка регистрации игрока с ошибочными данными
-requirement: |
+ requirement: |
     При вводе ошибочных данных в форму, система должна выдать подсказу 
-prerequisites:
+ prerequisites:
     Открыта страница регистарции
-test-data: |
+ test-data: |
     no data
-steps:
+ steps:
     - В поле  Nickname вводим "1"
     - В поле Email вводим "@"
     - В поле Password вводим "1"
     - В поле Password Confirmation вводим "2"
     - Нажимаем кнопку «Submit»
-expected-result: |
+ expected-result: |
     Под полями ввода отображаются подсказки верного ввода 
     
 
