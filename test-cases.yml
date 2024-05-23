@@ -1,124 +1,123 @@
----
-- summary: |
+summary: |
     Успешная регистрации игрока
-  requirement: |
+requirement: |
     Игрок должен иметь возможность зарегистрироваться
-  prerequisites: |
+prerequisites: |
     Открыта страница регистрации
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
     - Вводим Password Confirmation
     - Нажимаем кнопку «Submit»
-  expected-result: |
+expected-result: |
     Игрок попадает на страницу Lobby игры
 
-- summary: |
+summary: |
     Проверка регистрации игрока с некорректными данными
-  requirement: |
+requirement: |
     При вводе некорректных данных в форму, система должна выдать подсказу 
-  prerequisites:
+prerequisites:
     Открыта страница регистарции
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - В поле  Nickname вводим "1"
     - В поле Email вводим "@"
     - В поле Password вводим "1"
     - В поле Password Confirmation вводим "2"
     - Нажимаем кнопку «Submit»
-  expected-result: |
+expected-result: |
     Под полями ввода отображаются подсказки верного ввода 
 
-- summary: |
+summary: |
     Успешная авторизация
-  requirement: |
+requirement: |
     Игрок должен иметь возможность авторизоваться
-  prerequisites: |
+prerequisites: |
     Открыта страница авторизации
-  test-data: |
+test-data: |
     Email TestOK@TestOK.ru
     Password TestOK
-  steps:
+steps:
     - Ввести Email
     - Ввести Password
     - Нажимаем кнопку «Submit»
-  expected-result: |
+expected-result: |
     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
-- summary: |
+summary: |
     Проверка авторизации несуществующего в системе игрока
-  requirement: |
+requirement: |
     При вводе незарегистрированных данных, сайт должен выдать ошибку
-  prerequisites: |
+prerequisites: |
     Открыта страница авторизации
-  test-data: |
+test-data: |
     Email TestOK@TestOK.ru
     Password TestOK
-  steps:
+steps:
     - Ввести Email
     - Ввести Password
     - Нажимаем кнопку «Submit»
-  expected-result: |
+expected-result: |
     Появляется сообщение "EMAIL_NOT_FOUND"
 
-- summary: |
+summary: |
     Успешная авторизация с аккаунтом Github
-  requirement: |
+requirement: |
     Игрок может авторизоваться с аккаунтом Github
-  prerequisites: |
+prerequisites: |
     Должна быть регистрация на Github
-  test-data: |
+test-data: |
     no data 
-  steps:
+steps:
     - Нажать на кнопку "Sign in with Github"
-  expected-result: |
+expected-result: |
     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
-- summary: |
+summary: |
     Успешная авторизация с аккаунтом Discord
-  requirement: |
+requirement: |
     Игрок может авторизоваться с аккаунтом  Discord
-  prerequisites: |
+prerequisites: |
     Должна быть регистрация на Discord
-  test-data: |
+test-data: |
     no data 
-  steps:
+steps:
     - Нажать на кнопку "Sign in with Discord"
     - Нажать "Авторизовать" при запросе доступа CodeBattle к учётной записи Discord 
-  expected-result: |
+expected-result: |
     Игрок попадает на страницу Lobby игры, в верхнем левом углу появляется надпись "Successfully authenticated"
 
-- summary: |
+summary: |
     Успешное создание игры с ботом
-  requirement: |
+requirement: |
     Игрок может создать игру с ботом
-  prerequisites: |
+prerequisites: |
     Авторизованы на сайте 
-  test-data: |
+test-data: |
     no data 
-  steps:
+steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With a bot
     - Выбрать ползунком в графе "Time control" - выбрать время игры
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
-  expected-result: |
+expected-result: |
     Начнется игра с выбранными параметрами
 
-- summary: |
+summary: |
     Успешное создание игры с другом
-  requirement: |
+requirement: |
     Игрок может создать игру с другом
-  prerequisites: |
+prerequisites: |
     Авторизованы на сайте 
-  test-data: |
+test-data: |
     нужно знать ник друга
-  steps:
+steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With a friend
@@ -126,63 +125,63 @@
     - Набрать в графе "Choose opponent"- никнейм друга
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
-  expected-result: |
+expected-result: |
     Другу отправиться вызов, на иконке с двумя мечами загориться оповещение о приглашении, игра начнется как друг примет вызов
     
- - summary: |
+summary: |
     Успешное создание игры с любым игроком
-  requirement: |
+requirement: |
     Игрок может создать игру с любым игроком
-  prerequisites: |
+prerequisites: |
     Авторзованы на сайте
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - Нажать на кнопку - "Create a game"
     - Нажать в графе "Level" - выбрать количество звёзд которые соответсвуют сложности игры
     - Нажать в графе "Game Type" - With other user
     - Выбрать ползунком в графе "Time control" - выбрать время игры
     - Выбрать в графе "Choose task by name or tags" в выпадающем меню - любую игру
     - Нажать на кнопку - "Create battle"
-  expected-result: |
+expected-result: |
     Игра создана, появится уведомление  - "Ждем соперника пожалуйста, подождите, пока кто-нибудь присоединится, или отправьте приглашение по ссылке ниже"   
 
-- summary: |
+summary: |
     Успешное создание турнира # турнир создан но не могу подключиться к своему
-  requirement: |
+requirement: |
     Игрок может создать турнир
-  prerequisites: |
+prerequisites: |
     Авторзован на сайте
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - На главной странице кликаем по иконке никнейма в правом верхнем углу
     - Выбираем "Tournaments"
     - Откроется страница "Tournaments"
     - Внизу страницы, к разделу "Create a new tournament"
-  expected-result: |
+expected-result: |
     Турнир успешно создан
     
-- summary: |
+summary: |
     Проверка отображения набора кода соперником  # Нужен ли тест?
-  requirement: |
+requirement: |
     Игрок должен видеть действия соперника
-  prerequisites: |
+prerequisites: |
     Авторизованы на сайте, создана игра
-  test-data: |
+test-data: |
     no data 
-  steps:
+steps:
     Открыта игра с соперником
-  expected-result: |
+expected-result: |
     Видим в игре действия соперника по набору кода , смены языка програмирования
     
- - summary: |
+summary: |
     Получения очков по итогам игры 
-  requirement: |
+requirement: |
     Игроки должны получать очки за выйгрыш, которые влияют на рейтинг
-  prerequisites: |
+prerequisites: |
     Создать игру с ботом rect_area, level -1 звезда, Time control - 10 min, язык - NodeJS 
-  test-data: |
+test-data: |
     const _ = require("lodash");
     const R = require("rambda");
 
@@ -191,109 +190,109 @@
     };
 
     module.exports = solution;
-  steps:
+steps:
   -Ввести в поле набора кода, код выше
-  expected-result: |
+expected-result: |
    Откротся окно  "Woohoo, you're Champion!!!!!" и танцующим бананом, после нажатия "Thanks", в окне набора кода появится кубок, в строке "Score" должна быть цифра 1
    
-- summary: |
+summary: |
     Проверка выбора языка программирования в игре по умолчанию
-  requirement: |
+requirement: |
     Игрок должен установить язык программирования 
-  prerequisites: |
+prerequisites: |
     Авторзован на сайте
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - На главной странице нажимаем на значок никнейма
     - В Меню выбираем "Settings"
     - В появившемся окне выбираем в графе "Your weapon" нужный язык
     - Нажать на кнопку - "Save"
-  expected-result: |
+expected-result: |
     Должно появится сообщение "Your settings has been changed" и игрок будет начинать игры с выбранным языком програмирования
 
-- summary: |
+summary: |
     Успешная смены языка программирования во время игры
-  requirement: |
+requirement: |
     Возможность игрока менять язык программирования во время игры
-  prerequisites: |
+prerequisites: |
     Авторзован на сайте, создана игра
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
      - Над окном набора кода в выпадающем окне выбрать нужный язык
-  expected-result: |
+expected-result: |
     Язык програмирования должен поменятся на выбранный
 
-- summary: |
+summary: |
     Успешная смены языка описания задачи
-  requirement: |
+requirement: |
     Возможность игрока менять язык с английского на русский
-  prerequisites: |
+prerequisites: |
     Авторзован на сайте, создана игра
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
      - Над описанием задачи, выше справа, в выпадающем окне выбрать "RU"
-  expected-result: |
+expected-result: |
     Язык описания должен поменятся на русский
     
-- summary: |
+summary: |
     Успешный возврат в начатую игру
-  requirement: |
+requirement: |
     Игрок должен вернуться в начатую игру при закрытии окна, потери связи
-  prerequisites: |
+prerequisites: |
     Авторзован на сайте, создана игра
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
      - Закрыть вклаку с игрой или разлогиниться
      - Вновь зайти на сайт игры
      - Если нужно авторизоваться
      - В верзнем правом углу вместо кнопки "Create a game" должна быть кнопка "Continue"
      - Нажать кнопку "Continue"
-  expected-result: |
+expected-result: |
     Должны вернуться в ранее запущеную игру
     
- - summary: |
+summary: |
     Проверка возможности наблюдать за соревнованием других игроков
-  requirement: |
+requirement: |
     Мгрок может смотреть соревнование двух других игроков
-  prerequisites: |
+prerequisites: |
    Пользователи авторизованы на сайте
-  test-data: | 
+test-data: | 
     no data
-  steps:
+steps:
     -На странице, в разделе "Lobby" находим начавшуюся игру, нажимаем кнопку "Show" 
-  expected-result: |
+expected-result: |
     Открывается страница с соревнованием игроков   
 
-- summary: |
+summary: |
     Проверка общения в чате
-  requirement: |
+requirement: |
     Зарегистрированные игроки имеют возможность общаться в чате
-  prerequisites: |
+prerequisites: |
     Авторзованы на сайте
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - Скролим главную страницу до появления чата
     - В поле "Be nice in chat!" вводим сообщение
     - Нажимаем - Send
-  expected-result: |
+expected-result: |
     Сообщение отправлено и отображается выше в чате
 
-- summary: |
+summary: |
     Запуск игры без регистрации и авторизации на сайте
-  requirement: |
+requirement: |
     Игрок иметь возможность "попробовать" игру
-  prerequisites: |
+prerequisites: |
     Игрок не зарегистрирован
-  test-data: |
+test-data: |
     no data
-  steps:
+steps:
     - На титульной странице нажимаем "Try simple battle"
-  expected-result: |
+expected-result: |
     Переходим на страницу игры с ботом
 
 
