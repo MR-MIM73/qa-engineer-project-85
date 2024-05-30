@@ -23,7 +23,7 @@
     Успешная авторизация с аккаунтом Discord
   status: pass
   
-- summary: |  NEW
+- summary: |  
     Проверка создания игры с выбранными параметрами 
   status: pass
   
@@ -66,8 +66,8 @@
 - summary: |
     Успешный возврат в начатую игру
   status: pass
-
-- summary: | NEW
+  
+- summary: | 
     Проверка завершения игры сдачей
   status: pass
   
