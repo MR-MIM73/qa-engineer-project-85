@@ -285,7 +285,7 @@
   steps:
      - Нажать на иконку Флага
      - Нажать "Give up" в появившемся окне
-      expected-result: |
+  expected-result: |
     Появится сообщение "If you read this you've lost the game"
     
 - summary: |
