@@ -207,9 +207,7 @@
   test-data: |
      no data
   steps:
-     - Пишем код:
-     "let x = arr.filter((el)=> el%2===0)
-      return x.reduce((acc, el)=> acc+=el**2, 0)" 
+     - Пишем код:"let x = arr.filter((el)=> el%2===0) return x.reduce((acc, el)=> acc+=el**2, 0)" 
   expected-result: |
      Соперник видит набор кода , смены языка програмирования
     
