@@ -202,13 +202,15 @@
   requirement: |
     Игрок должен видеть действия соперника
   prerequisites: |
-    Авторизованы на сайте
+    Авторизованы на сайте,
+    создана игра "even_array_square_sum" с другом язык "Node.js"    
   test-data: |
-    no data 
+     no data
   steps:
-     - Нажать "Create a game"
+     - Пишем код:  let x = arr.filter((el)=> el%2===0)
+       return x.reduce((acc, el)=> acc+=el**2, 0) 
   expected-result: |
-    Видим в игре действия соперника по набору кода , смены языка програмирования
+     Соперник видит набор кода , смены языка програмирования
     
 - summary: |
     Получения очков по итогам игры 
