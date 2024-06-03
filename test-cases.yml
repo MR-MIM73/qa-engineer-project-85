@@ -203,13 +203,13 @@
     Игрок должен видеть действия соперника
   prerequisites: |
     Авторизованы на сайте,
-    создана игра "even_array_square_sum" с другом язык "Node.js"    
+    создана игра "even_array_square_sum" с другом, язык "Node.js"    
   test-data: |
      no data
   steps:
      - Пишем код:"let x = arr.filter((el)=> el%2===0) return x.reduce((acc, el)=> acc+=el**2, 0)" 
   expected-result: |
-     Соперник видит набор кода , смены языка програмирования
+     Соперник видит набор кода 
     
 - summary: |
     Получения очков по итогам игры 
@@ -301,7 +301,7 @@
 - summary: | 
     Проверка завершения игры сдачей
   requirement: |
-    Игрок должен иметь возможность сдаться 
+    Игрок должен иметь возможность закончить игру сдавшись 
   prerequisites: |
     Авторзован на сайте, создана игра
   test-data: |
@@ -311,6 +311,32 @@
      - Нажать "Give up" в появившемся окне
   expected-result: |
     Появится сообщение "If you read this you've lost the game"
+
+- summary: | 
+    Проверка завершения игры проигрышем
+  requirement: |
+    Игрок должен иметь возможность закончить игру проигрышем
+  prerequisites: |
+    Авторзован на сайте, создана игра
+  test-data: |
+    no data
+  steps:
+     - 
+  expected-result: |
+    Появится сообщение "If you read this you've lost the game"
+
+- summary: | 
+    Проверка завершения игры по окончании времени
+  requirement: |
+    Игрок должен иметь возможность закончить игру по окончании времени
+  prerequisites: |
+    Авторзован на сайте, создана игра
+  test-data: |
+    no data
+  steps:
+     - 
+  expected-result: |
+    Появится сообщение "Time is up. There are no winners in the game"
     
 - summary: |
     Проверка возможности наблюдать за соревнованием других игроков
