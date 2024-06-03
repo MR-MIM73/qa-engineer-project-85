@@ -315,13 +315,13 @@
 - summary: | 
     Проверка завершения игры проигрышем
   requirement: |
-    Игрок должен иметь возможность закончить игру проигрышем
+    Игрок должен иметь возможность закончить игру если проиграл
   prerequisites: |
     Авторзован на сайте, создана игра
   test-data: |
     no data
   steps:
-     - 
+     - Дождаться пока соперник наберет верный код 
   expected-result: |
     Появится сообщение "If you read this you've lost the game"
 
@@ -334,7 +334,7 @@
   test-data: |
     no data
   steps:
-     - 
+     - Дождаться окончания таймера
   expected-result: |
     Появится сообщение "Time is up. There are no winners in the game"
     
