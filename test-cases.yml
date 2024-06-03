@@ -324,7 +324,7 @@
   steps:
      - Войти под игроком TestOK
      - Принять приглашение, нажав на иконку с мечами и "Accept"
-     - Ввести код: "let x = arr.filter((el)=> el%2===0) return x.reduce((acc, el)=> acc+=el**2, 0)" 
+     - Ввести код:"let x = arr.filter((el)=> el%2===0) return x.reduce((acc, el)=> acc+=el**2, 0)" 
      - Нажать кнопку "RUN"
      - Воити под своими данными # так можно?
   expected-result: |
